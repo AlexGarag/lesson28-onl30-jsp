@@ -12,12 +12,12 @@ import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
 
 public class FileProcessor {
 
-    public static void writeUsers(String uuidUser, String nameUser, String password) {
+    public static void writeUsers(String uuidUser, String nameUser, String loginUser, String password) {
         ZonedDateTime dateTime = ZonedDateTime.now(ZoneOffset.UTC);
         String lineFileCsv = String.format(USERS_CSV_FORMAT_TEMPLATE,
-                dateTime.toInstant().toEpochMilli(),
                 uuidUser,
                 nameUser,
+                loginUser,
                 password);
         Thread writeFile = new Thread(() -> {
             try {

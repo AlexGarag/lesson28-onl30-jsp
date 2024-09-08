@@ -7,13 +7,15 @@ import static by.tms.lesson28.onl30.jsp.servants.FileProcessor.writeUsers;
 public class User {
     String uuidUser;
     String nameUser;
-    String password;
+    String loginUser;
+    String passwordUser;
 
-    public User(String name, String password) {
+    public User(String name, String login, String password) {
         this.uuidUser = UUID.randomUUID().toString();
         this.nameUser = name;
-        this.password = password;
-        writeUsers(uuidUser, nameUser, password);
+        this.loginUser = login;
+        this.passwordUser = password;
+        writeUsers(uuidUser, nameUser, loginUser, passwordUser);
     }
 
     public String getUuidUser() {
@@ -24,8 +26,12 @@ public class User {
         return nameUser;
     }
 
+    public String getLoginUser() {
+        return loginUser;
+    }
+
     public String getPassword() {
-        return password;
+        return passwordUser;
     }
 
     public void setNameUser(String nameUser) {
@@ -33,14 +39,14 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.passwordUser = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "name='" + nameUser + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + passwordUser + '\'' +
                 '}';
     }
 }
