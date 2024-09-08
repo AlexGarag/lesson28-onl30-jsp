@@ -16,6 +16,7 @@ public class KeeperConstants {
     public static final String USERS_CSV_FORMAT_TEMPLATE = "%s" + SEPARATOR + "%s" + SEPARATOR + "%s\n";
     public static final String LOGGER_MESSAGE_TEMPLATE = "%s, %s\n";
     public static final String DATE_TIME_LOGGER_TEMPLATE = "dd/MM/yyyy HH:mm:ss";
+    public static final String HOME_PAGE = "/pages/home.jsp";
 //    public static final String DOUBLE_2_STRING = "%.2f";
     // todo сделать присвоение из файла настройки
     public static final boolean IS_PERFORM_LOGGING = true;
