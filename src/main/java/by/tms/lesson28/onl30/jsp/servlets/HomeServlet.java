@@ -9,10 +9,17 @@ import java.io.IOException;
 
 import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
+import static by.tms.lesson28.onl30.jsp.storage.UserStorage.loadLoginPasswordUsers;
 
 @WebServlet(urlPatterns = "/")
 public class HomeServlet extends HttpServlet {
     private static final String SERVLET_NAME = "HomeServlet";
+
+
+    public void init() /*throws ServletException*/ {
+//        super.init();
+        loadLoginPasswordUsers();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

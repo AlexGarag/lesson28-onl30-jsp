@@ -2,7 +2,7 @@ package by.tms.lesson28.onl30.jsp.model;
 
 import java.util.UUID;
 
-import static by.tms.lesson28.onl30.jsp.servants.FileProcessor.writeUsers;
+import static by.tms.lesson28.onl30.jsp.servants.FileProcessor.saveUser;
 
 public class User {
     String uuidUser;
@@ -15,7 +15,14 @@ public class User {
         this.nameUser = name;
         this.loginUser = login;
         this.passwordUser = password;
-        writeUsers(uuidUser, nameUser, loginUser, passwordUser);
+        saveUser(uuidUser, nameUser, loginUser, passwordUser);
+    }
+
+    public User(String uuid, String name, String login, String password) {
+        this.uuidUser = uuid;
+        this.nameUser = name;
+        this.loginUser = login;
+        this.passwordUser = password;
     }
 
     public String getUuidUser() {
@@ -44,9 +51,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + nameUser + '\'' +
-                ", password='" + passwordUser + '\'' +
-                '}';
+        return "User{" + "name='" + nameUser + '\'' +
+                ", password='" + passwordUser + '\'' + '}';
     }
 }
