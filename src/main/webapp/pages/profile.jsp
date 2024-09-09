@@ -10,8 +10,9 @@
     <title>${user.loginUser} profile page</title>
 </head>
 <body>
-<%--    <h4>Name: ${user.nameUser}</h4>--%>
     <h4>Login: ${user.loginUser}</h4>
-<%--    <h4>Password: ${user.nameUser}</h4>--%>
+    <h4>Name: ${user.nameUser}</h4>
+    <h4>ID: ${user.uuidUser}</h4>
+    <h4>Password: ${user.nameUser}</h4>
 </body>
 </html>
