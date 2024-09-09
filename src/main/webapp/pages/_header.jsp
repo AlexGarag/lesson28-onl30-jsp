@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: AlexGarag
-  Date: 08.09.2024
-  Time: 12:58
-  To change this template use File | Settings | File Templates.
---%>
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -34,7 +27,7 @@
                 </li>
                 <c:if test="${currentUser == null}">
                     <li class="nav-item">
-                        <a class="nav-link" href="/user/reg">Registration</a>
+                        <a class="nav-link" href="/user/registration">Registration</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/user/login">Login</a>

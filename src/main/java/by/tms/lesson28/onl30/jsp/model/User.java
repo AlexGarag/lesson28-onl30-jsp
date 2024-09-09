@@ -13,8 +13,10 @@ public class User {
     public User(String name, String login, String password) {
         this.uuidUser = UUID.randomUUID().toString();
         this.nameUser = name;
+// todo закрыть логин и пароль хэш-функцией
         this.loginUser = login;
         this.passwordUser = password;
+// todo правильное добавление юзера: одновременно в List и файл
         saveUser(uuidUser, nameUser, loginUser, passwordUser);
     }
 
