@@ -42,14 +42,14 @@ public class UserLoginServlet extends HttpServlet {
         if (byUserName.isPresent()) {
             User user = byUserName.get();
             if (user.getPassword().equals(password)) {
-                req.getSession().setAttribute("currentUser", user);
+                req.getSession().setAttribute(CURRENT_USER_ATTRIBUTE, user);
                 resp.sendRedirect(SLAGE);
             } else {
-                req.setAttribute("message", PASSWORD_PROBLEM);
+                req.setAttribute(MESSAGE_ATTRIBUTE, PASSWORD_PROBLEM);
                 req.getRequestDispatcher(LOGIN_PAGE).forward(req, resp);
             }
         } else {
-            req.setAttribute("message", USER_PROBLEM);
+            req.setAttribute(MESSAGE_ATTRIBUTE, USER_PROBLEM);
             req.getRequestDispatcher(LOGIN_PAGE).forward(req, resp);
         }
         if (IS_PERFORM_LOGGING) logIn(ENDING_WORK_MESSAGE_TEMPLATE.formatted(SERVLET_GET_NAME));

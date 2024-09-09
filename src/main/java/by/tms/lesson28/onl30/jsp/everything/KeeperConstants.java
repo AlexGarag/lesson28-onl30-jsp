@@ -9,10 +9,10 @@ public class KeeperConstants {
     public static final String LOGGER_MESSAGE_TEMPLATE = "%s -- %s" + LF;
     public static final String ERROR_TEMPLATE = "ERROR: %s";
     public static final String ERROR_IO_FILE_TEMPLATE = "invalid path to %s";
-    public static final String ERROR_ON_OPERAND_TEMPLATE = "one of the operands is not a number";
-    public static final String ERROR_ON_TYPE_OPERATION_TEMPLATE = "the specified operation is not being processed";
-    public static final String INVALID_OPERATION = "invalid operation";
-    public static final String RESPONSE_TEMPLATE = "result operation: %s";
+//    public static final String ERROR_ON_OPERAND_TEMPLATE = "one of the operands is not a number";
+//    public static final String ERROR_ON_TYPE_OPERATION_TEMPLATE = "the specified operation is not being processed";
+//    public static final String INVALID_OPERATION = "invalid operation";
+//    public static final String RESPONSE_TEMPLATE = "result operation: %s";
     public static final String USERS_CSV_FILE = "C:\\Users\\123\\IdeaProjects\\lesson28-onl30-jsp\\src\\main\\resources\\users.csv";
     // todo логирование в файл
     public static final String LOGGING_FILE = "C:\\Users\\123\\IdeaProjects\\lesson28-onl30-jsp\\src\\main\\resources\\logging.txt";
@@ -27,6 +27,13 @@ public class KeeperConstants {
     public static final String LOGIN_PATH = "/user/login";
     public static final String LOGOUT_PATH = "/user/logout";
     public static final String PROFILE_PATH = "/user/profile";
+    public static final String LOGIN_USER_PARAMETER = "login";
+    public static final String NAME_USER_PARAMETER = "name";
+    public static final String PASSWORD_USER_PARAMETER = "password";
+    public static final String USER_PARAMETER = "user";
+    public static final String CURRENT_USER_ATTRIBUTE = "currentUser";
+    public static final String MESSAGE_ATTRIBUTE = "message";
+
     // todo сделать присвоение из файла настройки
     public static final boolean IS_PERFORM_LOGGING = true;
     public static final boolean IS_PERFORM_FILE_LOGGING = true;

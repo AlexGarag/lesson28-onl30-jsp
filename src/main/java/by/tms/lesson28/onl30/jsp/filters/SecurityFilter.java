@@ -15,11 +15,10 @@ import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 public class SecurityFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-        if (req.getSession().getAttribute("currentUser") == null) {
+        if (req.getSession().getAttribute(CURRENT_USER_ATTRIBUTE) == null) {
             chain.doFilter(req, res);
         } else {
-//            res.sendRedirect(SLAGE);
-            res.sendRedirect("/");
+            res.sendRedirect(SLAGE);
         }
     }
 }
