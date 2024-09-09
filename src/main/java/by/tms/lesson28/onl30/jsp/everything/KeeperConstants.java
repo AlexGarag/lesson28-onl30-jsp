@@ -24,6 +24,7 @@ public class KeeperConstants {
     public static final String LOGIN_PAGE = "/pages/login.jsp";
     public static final String PROFILE_PAGE = "/pages/profile.jsp";
     public static final String REGISTRATION_PATH = "/user/registration";
+    public static final String HOME_PATH = SLAGE;
     public static final String LOGIN_PATH = "/user/login";
     public static final String LOGOUT_PATH = "/user/logout";
     public static final String PROFILE_PATH = "/user/profile";

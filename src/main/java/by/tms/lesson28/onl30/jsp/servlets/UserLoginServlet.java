@@ -43,7 +43,7 @@ public class UserLoginServlet extends HttpServlet {
             User user = byUserName.get();
             if (user.getPassword().equals(password)) {
                 req.getSession().setAttribute(CURRENT_USER_ATTRIBUTE, user);
-                resp.sendRedirect(SLAGE);
+                resp.sendRedirect(HOME_PATH);
             } else {
                 req.setAttribute(MESSAGE_ATTRIBUTE, PASSWORD_PROBLEM);
                 req.getRequestDispatcher(LOGIN_PAGE).forward(req, resp);

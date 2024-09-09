@@ -18,7 +18,7 @@ public class SecurityFilter extends HttpFilter {
         if (req.getSession().getAttribute(CURRENT_USER_ATTRIBUTE) == null) {
             chain.doFilter(req, res);
         } else {
-            res.sendRedirect(SLAGE);
+            res.sendRedirect(HOME_PATH);
         }
     }
 }
