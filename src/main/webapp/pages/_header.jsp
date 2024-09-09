@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: AlexGarag
+  Date: 09.09.2024
+  Time: 10:13
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
@@ -20,12 +27,12 @@
                 <li class="nav-item">
                     <c:if test="${currentUser == null}">
                         <a class="nav-link disabled" aria-disabled="true">Hello Guest</a>
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/registration">Registration</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/login">Login</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/registration">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/login">Login</a>
+                        </li>
                     </c:if>
                     <c:if test="${currentUser != null}">
                         <a class="nav-link disabled" aria-disabled="true">Hello ${currentUser.nameUser}</a>
@@ -37,22 +44,6 @@
                         </li>
                     </c:if>
                 </li>
-<%--                <c:if test="${currentUser == null}">--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="/user/registration">Registration</a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="/user/login">Login</a>--%>
-<%--                    </li>--%>
-<%--                </c:if>--%>
-<%--                <c:if test="${currentUser != null}">--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="/user/logout">Logout</a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="/user/profile?username=${currentUser.username}">Profile</a>--%>
-<%--                    </li>--%>
-<%--                </c:if>--%>
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
