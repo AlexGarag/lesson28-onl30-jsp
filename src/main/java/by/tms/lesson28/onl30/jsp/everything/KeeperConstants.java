@@ -20,7 +20,9 @@ public class KeeperConstants {
     public static final String HOME_PAGE = "/pages/home.jsp";
     public static final String REGISTRATION_PAGE = "/pages/registration.jsp";
     public static final String LOGIN_PAGE = "/pages/login.jsp";
-//    public static final String DOUBLE_2_STRING = "%.2f";
+    public static final String REGISTRATION_PATH = "/user/registration";
+    public static final String LOGIN_PATH = "/user/login";
+    public static final String LOGOUT_PATH = "/user/logout";
     // todo сделать присвоение из файла настройки
     public static final boolean IS_PERFORM_LOGGING = true;
 }

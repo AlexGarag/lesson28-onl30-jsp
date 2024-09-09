@@ -12,7 +12,7 @@ import java.io.IOException;
 import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
 
-@WebServlet(urlPatterns = "/user/registration")
+@WebServlet(urlPatterns = REGISTRATION_PATH)
 public class UserRegistrationServlet extends HttpServlet {
     private static final String SERVLET_GET_NAME = "DoGetUserRegistrationServlet";
     private static final String SERVLET_POST_NAME = "DoPostUserRegistrationServlet";

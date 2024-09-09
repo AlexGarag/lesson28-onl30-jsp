@@ -15,7 +15,7 @@ import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.BEGINNING_WORK_MESSAGE_TEMPLATE;
 import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
 
-@WebServlet("/user/login")
+@WebServlet(urlPatterns = LOGIN_PATH)
 public class UserLoginServlet extends HttpServlet {
     private static final String SERVLET_GET_NAME = "DoGetUserLoginServlet";
     private static final String SERVLET_POST_NAME = "DoPostUserLoginServlet";

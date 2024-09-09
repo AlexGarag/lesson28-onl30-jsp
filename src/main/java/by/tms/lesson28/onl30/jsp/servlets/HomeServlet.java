@@ -11,7 +11,7 @@ import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
 import static by.tms.lesson28.onl30.jsp.storage.UserStorage.loadLoginPasswordUsers;
 
-@WebServlet(urlPatterns = "/")
+@WebServlet(urlPatterns = SLAGE)
 public class HomeServlet extends HttpServlet {
     private static final String SERVLET_NAME = "HomeServlet";
 
