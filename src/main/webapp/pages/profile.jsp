@@ -14,5 +14,6 @@
     <h4>Name: ${user.nameUser}</h4>
     <h4>ID: ${user.uuidUser}</h4>
     <h4>Password: ${user.nameUser}</h4>
+    <img src="data:image/png;base64,${avatar}">
 </body>
 </html>

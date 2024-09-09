@@ -19,7 +19,7 @@ public class UserStorage {
         String[] loginPasswordUsersArray = readFile(USERS_CSV_FILE).split(LF);
         for (String loginPasswordUserString : loginPasswordUsersArray) {
             String[] loginPasswordUser = loginPasswordUserString.split(SEPARATOR);
-            users.add(new User(loginPasswordUser[0], loginPasswordUser[1], loginPasswordUser[2], loginPasswordUser[3]));
+            users.add(new User(loginPasswordUser[0], loginPasswordUser[1], loginPasswordUser[2], loginPasswordUser[3], loginPasswordUser[4].getBytes()));
         }
         if (IS_PERFORM_LOGGING) logIn(ENDING_WORK_MESSAGE_TEMPLATE.formatted(LOAD_FROM_FILE_USERS));
     }

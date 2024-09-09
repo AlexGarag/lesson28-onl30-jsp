@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Base64;
 import java.util.Optional;
 
 import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
@@ -26,7 +27,9 @@ public class UserProfileServlet extends HttpServlet {
         Optional<User> byLogin = users.findByLogin(userLogin);
         if (byLogin.isPresent()) {
             User user = byLogin.get();
+            String avatarString = Base64.getEncoder().encodeToString(user.getAvatarUser());
             req.setAttribute(USER_PARAMETER,user);
+            req.setAttribute("avatar",avatarString);
         }
         getServletContext().getRequestDispatcher(PROFILE_PAGE).forward(req, resp);
         if (IS_PERFORM_LOGGING) logIn(ENDING_WORK_MESSAGE_TEMPLATE.formatted(SERVLET_GET_NAME));

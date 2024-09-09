@@ -5,26 +5,29 @@ import java.util.UUID;
 import static by.tms.lesson28.onl30.jsp.servants.FileProcessor.saveUser;
 
 public class User {
-    String uuidUser;
-    String nameUser;
-    String loginUser;
-    String passwordUser;
+    private String uuidUser;
+    private String nameUser;
+    private String loginUser;
+    private String passwordUser;
+    private byte[] avatarUser;
 
-    public User(String name, String login, String password) {
+    public User(String name, String login, String password, byte[] image) {
         this.uuidUser = UUID.randomUUID().toString();
         this.nameUser = name;
 // todo закрыть пароль хэш-функцией
         this.loginUser = login;
         this.passwordUser = password;
+        this.avatarUser = image;
 // todo правильное добавление юзера: одновременно в List и файл
-        saveUser(uuidUser, nameUser, loginUser, passwordUser);
+        saveUser(uuidUser, nameUser, loginUser, passwordUser, avatarUser);
     }
 
-    public User(String uuid, String name, String login, String password) {
+    public User(String uuid, String name, String login, String password, byte[] image) {
         this.uuidUser = uuid;
         this.nameUser = name;
         this.loginUser = login;
         this.passwordUser = password;
+        this.avatarUser = image;
     }
 
     public String getUuidUser() {
@@ -41,6 +44,10 @@ public class User {
 
     public String getPassword() {
         return passwordUser;
+    }
+
+    public byte[] getAvatarUser() {
+        return avatarUser;
     }
 
     public void setNameUser(String nameUser) {
