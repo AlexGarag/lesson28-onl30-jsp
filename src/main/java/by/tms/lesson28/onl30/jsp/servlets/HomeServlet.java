@@ -16,8 +16,7 @@ public class HomeServlet extends HttpServlet {
     private static final String SERVLET_NAME = "HomeServlet";
 
 
-    public void init() /*throws ServletException*/ {
-//        super.init();
+    public void init() {
         loadLoginPasswordUsers();
     }
 
