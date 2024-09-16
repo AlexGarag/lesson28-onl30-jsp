@@ -12,7 +12,17 @@ import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 public class UsersReader implements FileReader {
 
     @Override
-    public List<User> read(String uuid) {
+    public List<?> read() {                         // формирует Список из ВСЕХ строк
+        return List.of();
+    }
+
+    @Override
+    public List<?> readRow(String uuid) {           // формирует Список только из строк, принадлежащих Сущности с UUID=uuid
+        return List.of();
+    }
+
+    @Override
+    public List<User> readRowOwner(String uuid) {   // формирует Список только из строк, принадлежащих Владельцу с UUID=uuid
         List<User> users = new ArrayList<>();
         Optional<String> fileString = FileReader.readFile(USERS_CSV_FILE);
         if (fileString.isPresent()) {

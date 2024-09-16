@@ -11,7 +11,9 @@ import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.ERROR_TEMPLAT
 import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
 
 public interface FileReader {
-    List<?> read(String uuid);
+    List<?> read();                     // формирует Список из ВСЕХ строк
+    List<?> readRow(String uuid);       // формирует Список только из строк, принадлежащих Сущности с UUID=uuid
+    List<?> readRowOwner(String uuid);  // формирует Список только из строк, принадлежащих Владельцу с UUID=uuid
 
     static Optional<String> readFile(String nameFile) {
         try {
