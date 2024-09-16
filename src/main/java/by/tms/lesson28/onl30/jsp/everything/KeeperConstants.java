@@ -14,6 +14,10 @@ public class KeeperConstants {
 //    public static final String INVALID_OPERATION = "invalid operation";
 //    public static final String RESPONSE_TEMPLATE = "result operation: %s";
     public static final String USERS_CSV_FILE = "C:\\Users\\123\\IdeaProjects\\lesson28-onl30-jsp\\src\\main\\resources\\users.csv";
+    public static final String POSTS_CSV_FILE = "C:\\Users\\123\\IdeaProjects\\lesson28-onl30-jsp\\src\\main\\resources\\posts.csv";
+    public static final String POSTS = "posts";
+    public static final String USERS = "users";
+
     // todo логирование в файл
     public static final String LOGGING_FILE = "C:\\Users\\123\\IdeaProjects\\lesson28-onl30-jsp\\src\\main\\resources\\logging.txt";
 //    public static final String LOGIN_PASSWORD_STORAGE = "C:\\Users\\123\\IdeaProjects\\lesson-26-30-onl-webCalculator\\src\\main\\java\\login_password.csv";

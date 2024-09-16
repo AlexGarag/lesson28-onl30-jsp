@@ -18,8 +18,7 @@ public class User {
         this.loginUser = login;
         this.passwordUser = password;
         this.avatarUser = image;
-// todo правильное добавление юзера: одновременно в List и файл
-        saveUser(uuidUser, nameUser, loginUser, passwordUser, avatarUser);
+//        saveUser(uuidUser, nameUser, loginUser, passwordUser, avatarUser);
     }
 
     public User(String uuid, String name, String login, String password, byte[] image) {
