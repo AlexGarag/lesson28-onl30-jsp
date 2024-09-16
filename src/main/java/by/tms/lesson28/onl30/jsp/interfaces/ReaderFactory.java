@@ -7,7 +7,7 @@ import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.POSTS_CSV_FIL
 import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.USERS_CSV_FILE;
 
 public interface ReaderFactory {
-    Reader createReader();
+    FileReader createReader();
 
     static ReaderFactory createReaderFactory(String nameFile) {
         if (USERS_CSV_FILE.contains(nameFile)) {

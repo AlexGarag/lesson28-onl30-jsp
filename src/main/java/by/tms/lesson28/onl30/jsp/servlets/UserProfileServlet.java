@@ -27,9 +27,9 @@ public class UserProfileServlet extends HttpServlet {
         Optional<User> byLogin = users.findByLogin(userLogin);
         if (byLogin.isPresent()) {
             User user = byLogin.get();
-            String avatarString = Base64.getEncoder().encodeToString(user.getAvatarUser());
+//            String avatarString = Base64.getEncoder().encodeToString(user.getAvatarUser());
             req.setAttribute(USER_PARAMETER,user);
-            req.setAttribute("avatar",avatarString);
+//            req.setAttribute("avatar",avatarString);
         }
         getServletContext().getRequestDispatcher(PROFILE_PAGE).forward(req, resp);
         if (IS_PERFORM_LOGGING) logIn(ENDING_WORK_MESSAGE_TEMPLATE.formatted(SERVLET_GET_NAME));

@@ -1,6 +1,5 @@
 package by.tms.lesson28.onl30.jsp.servants;
 
-import by.tms.lesson28.onl30.jsp.interfaces.Saver;
 import by.tms.lesson28.onl30.jsp.model.User;
 
 import java.io.IOException;
@@ -11,7 +10,7 @@ import java.nio.file.StandardOpenOption;
 import static by.tms.lesson28.onl30.jsp.everything.KeeperConstants.*;
 import static by.tms.lesson28.onl30.jsp.servants.MyLogger.logIn;
 
-public class FileSaver implements Saver {
+public class FileSaver implements by.tms.lesson28.onl30.jsp.interfaces.FileSaver {
 // todo имплементировать поля сущностей User, Post, Comment, Reaction, Subscription
     @Override
     public void save(Object object) {

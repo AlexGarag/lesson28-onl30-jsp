@@ -9,24 +9,24 @@ public class User {
     private String nameUser;
     private String loginUser;
     private String passwordUser;
-    private byte[] avatarUser;
+//    private byte[] avatarUser;
 
-    public User(String name, String login, String password, byte[] image) {
+    public User(String name, String login, String password) {
         this.uuidUser = UUID.randomUUID().toString();
         this.nameUser = name;
 // todo закрыть пароль хэш-функцией
         this.loginUser = login;
         this.passwordUser = password;
-        this.avatarUser = image;
+//        this.avatarUser = image;
 //        saveUser(uuidUser, nameUser, loginUser, passwordUser, avatarUser);
     }
 
-    public User(String uuid, String name, String login, String password, byte[] image) {
+    public User(String uuid, String name, String login, String password) {
         this.uuidUser = uuid;
         this.nameUser = name;
         this.loginUser = login;
         this.passwordUser = password;
-        this.avatarUser = image;
+//        this.avatarUser = image;
     }
 
     public String getUuidUser() {
@@ -45,9 +45,9 @@ public class User {
         return passwordUser;
     }
 
-    public byte[] getAvatarUser() {
-        return avatarUser;
-    }
+//    public byte[] getAvatarUser() {
+//        return avatarUser;
+//    }
 
     public void setNameUser(String nameUser) {
         this.nameUser = nameUser;

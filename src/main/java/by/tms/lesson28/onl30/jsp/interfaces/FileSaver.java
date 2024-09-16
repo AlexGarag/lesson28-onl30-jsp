@@ -1,5 +1,5 @@
 package by.tms.lesson28.onl30.jsp.interfaces;
 
-public interface Saver {
+public interface FileSaver {
     void save(Object object);
 }

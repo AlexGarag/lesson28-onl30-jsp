@@ -8,7 +8,7 @@ public class KeeperConstants {
     public static final String ENDING_WORK_MESSAGE_TEMPLATE = "'%s' completed the operation";
     public static final String LOGGER_MESSAGE_TEMPLATE = "%s -- %s" + LF;
     public static final String ERROR_TEMPLATE = "ERROR: %s";
-    public static final String ERROR_IO_FILE_TEMPLATE = "invalid path to %s";
+    public static final String ERROR_IO_FILE_TEMPLATE = "there was a problem when reading the '%s' file";
 //    public static final String ERROR_ON_OPERAND_TEMPLATE = "one of the operands is not a number";
 //    public static final String ERROR_ON_TYPE_OPERATION_TEMPLATE = "the specified operation is not being processed";
 //    public static final String INVALID_OPERATION = "invalid operation";
