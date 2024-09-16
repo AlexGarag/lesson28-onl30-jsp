@@ -22,7 +22,7 @@ public class UsersReader implements FileReader {
     }
 
     @Override
-    public List<User> readRowOwner(String uuid) {   // формирует Список только из строк, принадлежащих Владельцу с UUID=uuid
+    public List<User> readRowsOwner(String uuid) {   // формирует Список только из строк, принадлежащих Владельцу с UUID=uuid
         List<User> users = new ArrayList<>();
         Optional<String> fileString = FileReader.readFile(USERS_CSV_FILE);
         if (fileString.isPresent()) {

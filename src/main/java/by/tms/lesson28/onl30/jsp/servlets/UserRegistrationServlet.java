@@ -2,7 +2,7 @@ package by.tms.lesson28.onl30.jsp.servlets;
 
 import by.tms.lesson28.onl30.jsp.interfaces.FileSaver;
 import by.tms.lesson28.onl30.jsp.model.User;
-import by.tms.lesson28.onl30.jsp.servants.Saver;
+import by.tms.lesson28.onl30.jsp.servants.GeneralSaver;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -38,7 +38,7 @@ public class UserRegistrationServlet extends HttpServlet {
         Part avatarUser = req.getPart("avatar");
         byte[] avatarUserBytes = avatarUser.getInputStream().readAllBytes();
         User user = new User(nameUser, loginUser, passwordUser);
-        FileSaver fileUsersSaver = new Saver();
+        FileSaver fileUsersSaver = new GeneralSaver();
         fileUsersSaver.save(user);
         resp.sendRedirect("/");
         if (IS_PERFORM_LOGGING) logIn(ENDING_WORK_MESSAGE_TEMPLATE.formatted(SERVLET_POST_NAME));
